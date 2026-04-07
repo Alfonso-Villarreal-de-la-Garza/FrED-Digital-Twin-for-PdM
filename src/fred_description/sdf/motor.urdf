@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="FrED">
+
+  <!-- BASE -->
+  <link name="base_link"/>
+
+  <!-- PRIMERA PIEZA -->
+  <link name="pieza1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://FD/meshes/motor_wt.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- JOINT (OBLIGATORIO) -->
+  <joint name="base_to_pieza1" type="fixed">
+    <parent link="base_link"/>
+    <child link="pieza1"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>

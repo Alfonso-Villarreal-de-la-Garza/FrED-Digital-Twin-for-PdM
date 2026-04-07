@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="FrED">
+
+  <!-- BASE FRAME -->
+  <link name="base_link"/>
+
+  <!-- LINK CON TU MESH -->
+  <link name="fred_body">
+    <visual>
+      <!-- Ajusta posición si está fuera de vista -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      
+      <geometry>
+        <mesh filename="package://fred_description/meshes/FrED_Nano_V2_-_FrED_Nano_V2.STEP-1_eBom-FreeParts.STEP-1.dae"
+              scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- JOINT (OBLIGATORIO para que RViz lo vea) -->
+  <joint name="base_to_fred" type="fixed">
+    <parent link="base_link"/>
+    <child link="fred_body"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>

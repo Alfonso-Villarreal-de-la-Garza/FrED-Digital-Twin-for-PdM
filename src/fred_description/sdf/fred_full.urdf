@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="fred_full">
+
+    <static>false</static>
+
+    <!-- BASE -->
+    <link name="base_link">
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <!-- PIEZAS -->
+
+    <!-- motor -->
+    <link name="motor">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/fonsivillarreal/DT/src/FD/meshes/motor_wit.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- eje -->
+    <link name="eje">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/fonsivillarreal/DT/src/FD/meshes/eje_acopla.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- carrete -->
+    <link name="carrete">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/fonsivillarreal/DT/src/FD/meshes/carrete_pr.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- spool -->
+    <link name="spool">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/fonsivillarreal/DT/src/FD/meshes/spool_right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- JOINTS (temporales todos fijos) -->
+
+    <joint name="base_to_motor" type="fixed">
+      <parent>base_link</parent>
+      <child>motor</child>
+    </joint>
+
+    <joint name="motor_to_eje" type="fixed">
+      <parent>motor</parent>
+      <child>eje</child>
+    </joint>
+
+    <joint name="eje_to_carrete" type="fixed">
+      <parent>eje</parent>
+      <child>carrete</child>
+    </joint>
+
+    <joint name="carrete_to_spool" type="fixed">
+      <parent>carrete</parent>
+      <child>spool</child>
+    </joint>
+
+  </model>
+</sdf>

@@ -1,0 +1,308 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="fred_full">
+
+    <static>true</static>
+
+    <!-- BASE -->
+    <link name="base_link"/>
+
+    <!-- ===== CORE ===== -->
+
+    <link name="motor">
+      <visual name="visual">
+      <geometry>
+      <mesh>
+      <uri>../meshes/motor_wit.dae
+      </uri>
+      </mesh>
+      </geometry>
+      
+      <material>
+        <ambient>0.7 0.7 0.7 1</ambient>
+        <diffuse>0.7 0.7 0.7 1</diffuse>
+      </material>
+      </visual>
+    </link>
+
+    <link name="eje">
+      <visual name="visual">
+      <geometry>
+      <mesh>
+      <uri>../meshes/eje_acopla.dae
+      </uri>
+      </mesh>
+      </geometry>
+      
+      <material>
+        <ambient>1 0 0 1</ambient>
+        <diffuse>1 0 0 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="carrete">
+      <visual name="visual"><geometry><mesh><uri>../meshes/carrete_pr.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0 0 1 1</ambient>
+        <diffuse>0 0 1 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="spool_right">
+      <visual name="visual"><geometry><mesh><uri>../meshes/spool_right.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>0.9 0.9 0.9 1</specular>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="spool_izq">
+      <visual name="visual"><geometry><mesh><uri>../meshes/spool_izq_.dae</uri></mesh></geometry>
+      
+            <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>0.9 0.9 0.9 1</specular>
+      </material>
+      
+      </visual>
+    </link>
+
+
+
+    <!-- ===== ESTRUCTURA ===== -->
+
+    <link name="abajo_carr">
+      <visual name="visual"><geometry><mesh><uri>../meshes/abajo_carr.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+      </visual>
+    </link>
+
+    <link name="guia_upper">
+      <visual name="visual"><geometry><mesh><uri>../meshes/guia_upper.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>1 1 0 1</ambient>
+        <diffuse>1 1 0 1</diffuse>
+      </material>
+      </visual>
+    </link>
+
+    <link name="enlace_car">
+      <visual name="visual"><geometry><mesh><uri>../meshes/enlace_car.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0 1 0 1</ambient>
+        <diffuse>0 1 0 1</diffuse>
+      </material>
+      
+      </visual>
+    </link>
+
+    <!-- ===== SPOOLS SECUNDARIOS ===== -->
+
+    <link name="spool_aba">
+      <visual name="visual"><geometry><mesh><uri>../meshes/spool_aba.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.9 0.8 0.2 1</ambient>
+        <diffuse>0.9 0.8 0.2 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="spool_abaj">
+      <visual name="visual"><geometry><mesh><uri>../meshes/spool_abaj.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.2 0.4 0.8 1</ambient>
+        <diffuse>0.2 0.4 0.8 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="upper_spo">
+      <visual name="visual"><geometry><mesh><uri>../meshes/upper_spo.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.2 0.7 0.3 1</ambient>
+        <diffuse>0.2 0.7 0.3 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="upper_spoo">
+      <visual name="visual"><geometry><mesh><uri>../meshes/upper_spoo.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.7 0.1 0.1 1</ambient>
+        <diffuse>0.7 0.1 0.1 1</diffuse>
+      </material>
+
+      </visual>
+    </link>
+
+    <!-- ===== OTROS ===== -->
+
+    <link name="tubo_prede">
+      <visual name="visual"><geometry><mesh><uri>../meshes/tubo_prede.dae</uri></mesh></geometry>
+      
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="no_bolita">
+      <visual name="visual"><geometry><mesh><uri>../meshes/no_bolita_.dae</uri></mesh></geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+
+      </visual>
+    </link>
+
+    <link name="predeterm">
+      <visual name="visual"><geometry><mesh><uri>../meshes/predeterm.dae</uri></mesh></geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+      
+      </visual>
+    </link>
+
+    <link name="bearing">
+      <visual name="visual"><geometry><mesh><uri>../meshes/12.1.4.1_.dae</uri></mesh></geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+      </visual>
+    </link>
+
+    <link name="pieza_extra">
+      <visual name="visual"><geometry><mesh><uri>../meshes/3422-0250.dae</uri></mesh></geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.6 0.6 0.6 1</diffuse>
+        <specular>1 1 1 1</specular>
+      </material>
+      </visual>
+    </link>
+
+    <!-- ===== JOINTS (todo fijo por ahora) ===== -->
+
+    <joint name="base_to_motor" type="fixed">
+      <parent>base_link</parent>
+      <child>motor</child>
+    </joint>
+
+    <joint name="motor_to_eje" type="fixed">
+      <parent>motor</parent>
+      <child>eje</child>
+    </joint>
+
+    <joint name="eje_to_carrete" type="fixed">
+      <parent>eje</parent>
+      <child>carrete</child>
+    </joint>
+
+    <joint name="carrete_to_spool_right" type="fixed">
+      <parent>carrete</parent>
+      <child>spool_right</child>
+    </joint>
+
+    <joint name="carrete_to_spool_izq" type="fixed">
+      <parent>carrete</parent>
+      <child>spool_izq</child>
+    </joint>
+
+    <!-- TODO LO DEMÁS PEGADO AL BASE -->
+
+    <joint name="fix_abajo" type="fixed">
+      <parent>base_link</parent>
+      <child>abajo_carr</child>
+    </joint>
+
+    <joint name="fix_guia" type="fixed">
+      <parent>base_link</parent>
+      <child>guia_upper</child>
+    </joint>
+
+    <joint name="fix_enlace" type="fixed">
+      <parent>base_link</parent>
+      <child>enlace_car</child>
+    </joint>
+
+    <joint name="fix_spool_aba" type="fixed">
+      <parent>base_link</parent>
+      <child>spool_aba</child>
+    </joint>
+
+    <joint name="fix_spool_abaj" type="fixed">
+      <parent>base_link</parent>
+      <child>spool_abaj</child>
+    </joint>
+
+    <joint name="fix_upper1" type="fixed">
+      <parent>base_link</parent>
+      <child>upper_spo</child>
+    </joint>
+
+    <joint name="fix_upper2" type="fixed">
+      <parent>base_link</parent>
+      <child>upper_spoo</child>
+    </joint>
+
+    <joint name="fix_tubo" type="fixed">
+      <parent>base_link</parent>
+      <child>tubo_prede</child>
+    </joint>
+
+    <joint name="fix_bolita" type="fixed">
+      <parent>base_link</parent>
+      <child>no_bolita</child>
+    </joint>
+
+    <joint name="fix_predeterm" type="fixed">
+      <parent>base_link</parent>
+      <child>predeterm</child>
+    </joint>
+
+    <joint name="fix_bearing" type="fixed">
+      <parent>base_link</parent>
+      <child>bearing</child>
+    </joint>
+
+    <joint name="fix_extra" type="fixed">
+      <parent>base_link</parent>
+      <child>pieza_extra</child>
+    </joint>
+
+  </model>
+</sdf>
