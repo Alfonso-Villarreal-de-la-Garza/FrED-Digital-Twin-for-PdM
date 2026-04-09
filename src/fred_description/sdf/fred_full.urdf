@@ -61,8 +61,6 @@
       </visual>
     </link>
 
-    <!-- JOINTS (temporales todos fijos) -->
-
     <joint name="base_to_motor" type="fixed">
       <parent>base_link</parent>
       <child>motor</child>

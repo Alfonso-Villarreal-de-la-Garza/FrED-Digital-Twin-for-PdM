@@ -2,7 +2,7 @@
 <sdf version="1.7">
   <model name="fred_full">
 
-    <static>true</static>
+    <static>false</static>
 
     <!-- BASE -->
     <link name="base_link"/>
@@ -279,9 +279,13 @@
       <child>upper_spoo</child>
     </joint>
 
-    <joint name="fix_tubo" type="fixed">
-      <parent>base_link</parent>
+    <joint name="fix_tubo" type="revolute">
+      <parent>motor</parent>
       <child>tubo_prede</child>
+      <axis>
+        <xyz>0 0 1</xyz> <limit>
+        <lower>-3.1415</lower> <upper>3.1415</upper>  <effort>10</effort>    <velocity>1.0</velocity> </limit>
+      </axis>
     </joint>
 
     <joint name="fix_bolita" type="fixed">
